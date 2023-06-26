@@ -38,10 +38,16 @@ const groupOfTheWork = [
     }
 ];
 //console.log(groupOfTheWork)
-//Stampo in console tutte le informazioni
+//Stampo in console tutte le informazioni e poi le stampo sul DOC
 for (let i = 0; i < groupOfTheWork.length; i++){
     const element = groupOfTheWork[i];
-    for (const key in element) {
-        console.log(element[key]);
+    const colDom = document.createElement('div');
+    colDom.classList.add('col-4');
+    for (let key in element) {
+        colDom.innerHTML += element[key];         
+        //console.log(element[key]);
     }
+    const rowDom = document.querySelector('.row');
+    rowDom.append(colDom);
+
 }
