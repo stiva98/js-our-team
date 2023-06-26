@@ -7,3 +7,7 @@ RESET
     padding: 0;
     box-sizing: border-box;
 }
+.image {
+    width: 6.25rem;
+    height: 6.25rem;
+}

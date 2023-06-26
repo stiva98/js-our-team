@@ -1,4 +1,5 @@
 //Creo array di oggetti con le informazioni fornite
+
 const groupOfTheWork = [
     {
         firstname: 'Wayne',
@@ -42,6 +43,9 @@ const groupOfTheWork = [
 for (let i = 0; i < groupOfTheWork.length; i++){
     const element = groupOfTheWork[i];
     const colDom = document.createElement('div');
+    let imgMember = document.createElement('img');
+    imgMember.classList.add('image');
+    imgMember.src = 'img/' + element.image;
     colDom.classList.add('col-4');
     for (let key in element) {
         colDom.innerHTML += element[key];         
@@ -49,5 +53,6 @@ for (let i = 0; i < groupOfTheWork.length; i++){
     }
     const rowDom = document.querySelector('.row');
     rowDom.append(colDom);
+    rowDom.append(imgMember);
 
 }
