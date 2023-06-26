@@ -1,3 +1,4 @@
+//Creo array di oggetti con le informazioni fornite
 const groupOfTheWork = [
     {
         firstname: 'Wayne',
@@ -26,3 +27,11 @@ const groupOfTheWork = [
         image: 'barbara-ramos-graphic-designer.jpg',
     }
 ]
+console.log(groupOfTheWork)
+//Stampo in console tutte le informazioni
+for (let i = 0; i > groupOfTheWork.length; i++){
+    const element = groupOfTheWork[i];
+    for (const key in element) {
+        console.log(element[key]);
+    }
+}
